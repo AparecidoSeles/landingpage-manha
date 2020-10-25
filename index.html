@@ -5,16 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Landing Page - Curso de desenvolvimento de Sistemas</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/8ea9353849.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header class="topo">
             <nav >
-                <ul>
+                <ul id="myLinks">
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Sobre </a></li>
                     <li><a href="#">Desafios</a></li>
                     <li><a href="#">Endereços</a></li>
                 </ul>
+                      <a class="btnmenu" onclick="meumenu()">
+                        <i class="fas fa-bars"></i>
+                     </a>
             </nav>
         </header>
         <!--inicio banner-->
@@ -32,11 +36,15 @@
             <section class="sobre">
                 <h2>sobre os projetos</h2>
                 <div class="conteudo_sobre">
-                    <img src="images/imagem-seção-sobre.jpg" alt="Homem apresentando um produto para um grupo de pessoas">
-                    <div class="texto_sobre">
-                        <h3><span class="tag">Participantes</span><br>mais de 80 alunos organizados em 16 grupos</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita numquam, adipisci repellendus doloribus aut beatae quam at doloremque officia odit modi labore quo in libero eligendi provident voluptatum? Amet, perspiciatis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita numquam, adipisci repellendus doloribus aut beatae quam at doloremque officia odit modi labore quo in libero eligendi provident voluptatum? </p>
-                    </div>
+                    <picture>
+                      <source media="(max-width:767px )" srcset="images/reunião2.jpg">
+                      <source media="(max-width:1199px )" srcset="images/reunião.jpg">
+                        <img src="images/imagem-seção-sobre.jpg" alt="Homem apresentando um produto para um grupo de pessoas">
+                    </picture>
+                         <div class="texto_sobre">
+                            <h3><span class="tag">Participantes</span><br>mais de 80 alunos organizados em 16 grupos</h3>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita numquam, adipisci repellendus doloribus aut beatae quam at doloremque officia odit modi labore quo in libero eligendi provident voluptatum? Amet, perspiciatis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita numquam, adipisci repellendus doloribus aut beatae quam at doloremque officia odit modi labore quo in libero eligendi provident voluptatum? </p>
+                         </div>
                 </div>
             </section>
         </div>
@@ -77,5 +85,16 @@
             </div>
         </footer>
         <a href="http://api.whatsapp.com/send?phone=5511985420000" target="_black"><img src="images/imagem-whatsapp.jpg" alt="Envie uma menssagem em nosso ZAP" class="zap"></a> 
+<script>
+    function meumenu(){
+        var x = document.getElementById("myLinks");
+        if(x.style.display === "flex") {
+           x.style.display = "none";
+        } else{
+            x.style.display = "flex";
+         } 
+        }
+</script>
+        
     </body>
 </html>
