@@ -36,10 +36,11 @@ text-decoration: underline;/*coloca underline (barra embaixo das letras)*/
 .topo nav ul{
     width:90%;
     max-width: 600px;
-    height: 60px;
+    height: 65px;
     /*background-color: lime;*/
     list-style-type: none;/*remove marcadores*/
     display: flex;
+  
    
 }
 #myLinks{
@@ -52,7 +53,7 @@ text-decoration: underline;/*coloca underline (barra embaixo das letras)*/
 }
 .banner{
     width: 100%;
-    height: 740px; 
+    height: 740px;  
     background-image:url(../images/imagem-fundo-banner.jpg);
     background-size: cover;
     background-position: bottom ;
@@ -318,7 +319,62 @@ text-decoration: underline;/*coloca underline (barra embaixo das letras)*/
     #myLinks{
         display: none;
     }
-    .banner{
-        font-size: 60px;
+    .banner_text{
+        height: 550px;
+    }
+    .banner_text h1{
+        font-size: 80px;
+    }
+     .conteudo_sobre{
+       width: auto;
+       align-items: center;
+    }
+    .conteudo_sobre img{
+        margin-left: auto;
+        width:100%;
+        max-width:540px;
+        margin-bottom:2em;
+    }
+    .texto_sobre{
+        width: auto;
+    }
+    .texto_sobre h3{
+        width: auto;
+        font-size: 55px;
+    }
+    .info_card{
+        font-size: 20px;
+    }
+    .info_card p{
+        width: 180px;
+        font-size:18px;
+        align-content: center;
+    }
+}
+    @media screen and (max-width:575px){
+    .banner_text{
+        height: 520px;
+    }
+    .banner_text h1{
+        font-size: 75px;
+    }
+    .sobre{
+        display: flex;
+        align-items: center;
+    }
+    .sobre h2{
+        font-size:50px;
+    }
+    .conteudo_sobre{
+       align-items: center;
+    }
+    .conteudo_sobre img{
+        margin-top: -30px;
+       width: 100%;    
+       max-width: 500px;
+       margin-right: 2em;
+    }
+    .info_card{
+    flex-wrap:wrap;
     }
 }
